@@ -1,0 +1,41 @@
+body{
+    background: lightgray;
+    color: white;
+	background-size: 100vw 100vh;
+}
+
+.place1{
+	color: black;
+}
+
+.gray{
+
+	background-color: lightgray;
+}
+
+@media (max-width: 360px){
+
+	.flower{
+		font-size: 1rem;
+	}
+	.flower1{
+		font-size: 0.5rem
+	}
+}
+/* @media (max-width: 320px){
+
+	.flower{
+		font-size: 1rem;
+	}
+
+
+} */
+h3{
+	width: 100%;
+}
+p { text-indent: 20px; }
+
+.bg-warning{
+
+	background-color: gray !important;
+}
