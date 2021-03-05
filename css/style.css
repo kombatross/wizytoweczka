@@ -1,41 +1,62 @@
-body{
-    background: purple;
-    color: white;
-	background-size: 100vw 100vh;
+body {
+    background: lightgray;
+    /* color: white; */
+    background-size: 100vw 100vh;
 }
 
-.place1{
-	color: black;
+
+
+.gray {
+    background-color: lightgray;
 }
 
-.gray{
+@media (max-width: 767px){
 
-	background-color: lightgray;
+.ElContacto{
+
+        display: none;
+}
+.smile-face{
+    width: 50px;
+    height: 50px;
 }
 
-@media (max-width: 360px){
-
-	.flower{
-		font-size: 1rem;
-	}
-	.flower1{
-		font-size: 0.75rem;
-	}
+.rounded{
+    max-width: 50%;
 }
-/* @media (max-width: 320px){
 
-	.flower{
-		font-size: 1rem;
-	}
-
-
-} */
-h3{
-	width: 100%;
 }
-p { text-indent: 20px; }
 
-.bg-warning{
+@media (max-width:279px){
 
-	background-color: gray !important;
+    .smile-face{
+        display: none;
+    }
 }
+
+
+
+@media (max-width: 360px) {
+    .flower {
+        font-size: 1rem;
+    }
+    .flower1 {
+        font-size: 0.75rem;
+    }
+}
+
+.flower1{
+    text-indent: 20px;
+}
+
+
+
+h3 {
+    width: 100%;
+}
+
+.bg-warning {
+    background-color: gray !important;
+}
+
+
