@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("html").on("submit", "#contact_form", function(e) {
-                e.preventDefault();
-                $("#send_form_status").html('').hide();
-                var data = $("#contact_form").serialize();
-                $.post("/s.php", data, function(res) {
-                    $("#send_form_status").html(res.msg).show();
-                    if (res.status == 1) {
-                        $("#contact_form")[0].reset();
-                    }
-                });
-            });
-        });
-    </script>
+<script>
+$(document).ready(function() {
+  $("html").on("submit","#contact_form",function(e){
+    e.preventDefault();
+    $("#send_form_status").html('').hide();
+    var data=$("#contact_form").serialize();
+    $.post("/send_form.php",data,function(res){
+      $("#send_form_status").html(res.msg).show();
+      if(res.status==1){ 
+        $("#contact_form")[0].reset();
+      } 
+    });
+  });
+});
+</script>
 
 </head>
 
@@ -107,7 +107,7 @@
                                 <div>
                                     <div class="mb-3">
                                         <div id="send_form_status">
-                                            <form action="mailto:konradnater1@wp.pl" method="POST" enctype="multipart/form-data" name="contact-form">
+                                            <form id="contact-form" method="post" action="/s.php">
                                                 <p>Adres Email</p>
                                                 <div class="dropdown-divider col-6"></div>
                                                 <input type="text" name="email" class="form-control" id="email" placeholder="twoj_mail@gmail.com">
@@ -117,7 +117,7 @@
                                             <div class="dropdown-divider col-6 "></div>
                                             <textarea class="form-control" name="message" id="message" rows="4" placeholder="Wpisz wiadomość"></textarea>
                                             <div class="text-center">
-                                                <button class="btn bg-info mt-3">Wyślij mi wiadomośc no</button>
+                                                <button class="btn bg-info mt-3" id="sendBtn">Wyślij mi wiadomośc no</button>
                                                 </form>
                                             </div>
                                         </div>

@@ -1,22 +1,36 @@
-body {
-    background: lightgray;
-    /* color: white; */
-    background-size: 100vw 100vh;
-}
-
-
-
-.gray {
-    background-color: lightgray;
-}
-
-
-h3 {
-    width: 100%;
-}
-
-.bg-warning {
-    background-color: gray !important;
-}
-
-
+    body {
+        background: lightgray;
+        /* color: white; */
+        background-size: 100vw 100vh;
+    }
+    
+    .gray {
+        background-color: lightgray;
+    }
+    
+    h3 {
+        width: 100%;
+    }
+    
+    .gray {
+        background-color: gray;
+    }
+    
+    .alice {
+        color: aliceblue;
+    }
+    
+    .whitefont {
+        color: white;
+    }
+    
+    .card .card-body .card-text {
+        color: white;
+    }
+    
+    button {
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+    }
