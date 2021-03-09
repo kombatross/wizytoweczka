@@ -11,23 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("html").on("submit", "#contact_form", function(e) {
-                e.preventDefault();
-                $("#send_form_status").html('').hide();
-                var data = $("#contact_form").serialize();
-                $.post("/s.php", data, function(res) {
-                    $("#send_form_status").html(res.msg).show();
-                    if (res.status == 1) {
-                        $("#contact_form")[0].reset();
-                    }
-                });
-            });
-        });
-    </script>
-
+   
 </head>
 
 <body>
@@ -99,43 +83,45 @@
 
                                 <br>
                                 <h6 class="card-subtitle mb-2"><u>Email</u></h6>
-                                <p class="card-text whitefont">ZbigniewWodecki@wp.pl</p>
+                                <p class="card-text whitefont" id="Mail"></p>
                                 <br>
                                 <h6 class="card-subtitle mb-2"><u>Nr.Tel</u></h6>
-                                <p class="card-text whitefont">+48 123-456-789</p>
+                                <p class="card-text whitefont" id="Tel"></p>
                                 <br>
                                 <div>
                                     <div class="mb-3">
-                                        <div id="send_form_status">
-                                            <form action="mailto:konradnater1@wp.pl" method="POST" enctype="multipart/form-data" name="contact-form">
+                                       
+                                            <form name="gform" id="gform" enctype="text/plain"  action="https://docs.google.com/forms/d/e/1FAIpQLScGsS8jbT4ftGNLmczItCOsZgateTLFqU62Krd2LN_j7iszCQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                                                 <p>Adres Email</p>
                                                 <div class="dropdown-divider col-6"></div>
-                                                <input type="text" name="email" class="form-control" id="email" placeholder="twoj_mail@gmail.com">
-                                        </div>
-                                        <div class="mb-3">
-                                            <p>Napisz do mnie !</p>
-                                            <div class="dropdown-divider col-6 "></div>
-                                            <textarea class="form-control" name="message" id="message" rows="4" placeholder="Wpisz wiadomość"></textarea>
-                                            <div class="text-center">
-                                                <button class="btn bg-info mt-3">Wyślij mi wiadomośc no</button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                                <input type="text" name="entry.1067463707" class="form-control" id="email" placeholder="twoj_mail@gmail.com" required>
+                                                <div class="mb-3">
+                                                    <p>Napisz do mnie !</p></div>
+                                                <div class="dropdown-divider col-6 "></div>
+                                                    <textarea class="form-control" name="entry.66603740" id="message" rows="4" placeholder="Wpisz wiadomość" required></textarea>
+                                                <div class="text-center">
+                                                    <button class="btn bg-info mt-3">Wyślij mi wiadomośc no</button>
+                                                </div>
+                                            </form>
+
+                                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>    
                                     </div>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
-                        <div class="text-center">
-                            <img class="smile-face" src="img/smile.png" alt="SmileFace" width="100" height="100">
-                        </div>
+                            <div class="text-center">
+                                <img class="smile-face" src="img/smile.png" alt="SmileFace" width="100" height="100">
+                            </div>
                     </div>
-
                 </div>
-
-
-
+                        
             </div>
-            </div>
+
+                
+
+
+
+            
         </section>
 
 
@@ -147,8 +133,10 @@
     <script type="text/javascript " src="js/popper.min.js "></script>
     <script type="text/javascript " src="js/bootstrap.min.js "></script>
     <script type="text/javascript " src="js/mdb.min.js "></script>
-    <script type="text/javascript "></script>
-
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript " src="js/form.js "></script>
 </body>
 
 </html>
+
+

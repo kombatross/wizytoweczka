@@ -6,5 +6,5 @@ var age = year - born;
 document.getElementById("yo").innerHTML = age + " lat";
 
 
-
-console.log(age);
+document.getElementById("Mail").innerHTML = "konradnater1@wp.pl"
+document.getElementById("Tel").innerHTML = "+48 123-456-789"
